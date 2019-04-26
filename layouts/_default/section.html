@@ -1,0 +1,27 @@
+{{ define "main" }}
+    using template section.html <br>
+    Current Section: {{.Title}}
+    <hr>
+    {{ .Content }}
+    <hr>
+    
+    <h1>Sections</h1>
+    {{ range .Sections }}
+        <h2>{{ .Title}}</h2>
+        {{ .Summary}}<br>
+        {{ .Content }}<br>
+        <br>
+    {{ end }}
+    <hr>
+    
+    <h1>Pages</h1>
+    {{ range .Pages }}
+        <h2>{{.Title}}</h2>
+        - {{ .Summary}}<br>
+    {{ end }}
+{{ end }}
+
+
+{{ define "footer"}}
+    <h2>Footer</h2>
+{{ end }}

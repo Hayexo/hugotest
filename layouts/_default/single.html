@@ -1,0 +1,13 @@
+{{ define "title" }}
+    {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+    using template single.html <br>
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+{{ end }}
+
+{{ define "footer"}}
+    <h2>Footer</h2>
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+    using template list.html <br>
+    {{ range .Pages }}
+        <h2>{{ .Title }}</h2>
+        {{ .Summary }}
+    {{ end }}
+{{ end }}
+
+
+{{ define "footer"}}
+    <h2>Footer</h2>
+{{ end }}
